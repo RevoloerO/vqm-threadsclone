@@ -1,9 +1,5 @@
-import { useState } from 'react'
-import axios from 'axios'
-import Web3 from 'web3'
-import { useEffect } from 'react';
-import './App.css'
-import contractABI from "./abi.json";
+import React, { Component } from 'react';
+import Web3 from 'web3';
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -39,4 +35,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
