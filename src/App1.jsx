@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
+import headerImg1 from './assets/threads-clone-logo.jpeg';
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -22,16 +23,22 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Connect Wallet</h1>
-      {account ? (
-        <p>Connected account: {account}</p>
-      ) : (
-        <button onClick={() => window.ethereum.request({ method: 'eth_requestAccounts' })}>
-          Connect MetaMask
-        </button>
-      )}
-    </div>
+    <>
+      <div className='container'>
+        <img id="header-img-1" src={headerImg1} alt=""></img>
+        <h1>THREADS</h1>
+        <h2>Decentralized Social Media</h2>
+        <p>Connect your wallet to get started</p>
+        {account ? (
+          <p>Connected account: {account}</p>
+        ) : (
+          <button onClick={() => window.ethereum.request({ method: 'eth_requestAccounts' })}>
+            Connect MetaMask
+          </button>
+        )}
+      </div>
+    </>
+
   );
 }
 
