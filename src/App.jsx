@@ -9,6 +9,28 @@ import headerImg1 from './assets/threads-clone-logo.jpeg';
 
 function App() {
   const [account, setAccount] = useState(null);
+  const [threads, setThreads] = useState([][]);
+
+  const ShowThreads = () => {
+    const web3 = new Web3(Web3.givenProvider);
+    const contractAddress = '0x9b6b1b1e8d9e1c0f6d7b4f4e2d0c1f4e1f7f2e1c';
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    contract.methods.getThreads().call()
+      .then((result) => {
+        console.log('Threads:', result);
+      })
+      .catch((error) => {
+        console.error('Error getting threads:', error);
+      });
+
+    return (
+      <div>
+        <h2>Threads</h2>
+        {}
+      </div>
+    )
+  }
 
   useEffect(() => {
     const connectWallet = async () => {
