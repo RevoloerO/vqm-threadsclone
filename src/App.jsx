@@ -36,7 +36,8 @@ function App() {
     const connectWallet = async () => {
       if (window.ethereum) {
         try {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const accounts = await window.ethereum
+          .request({ method: 'eth_requestAccounts' });
           setAccount(accounts[0]);
         } catch (error) {
           getelementbyId('message').innerHTML = 'Error connecting to MetaMask';
@@ -59,7 +60,7 @@ function App() {
               <h2>Decentralized Social Media</h2>
               <p id='message'>Connect your wallet to get started</p>
               {account ? (
-                <p>Connected account: {account}</p>
+                <p>Connected account: {account.slice(0, 5)}...{account.slice(-4)}</p>
               ) : (
                 <button onClick={() => window.ethereum.request({ method: 'eth_requestAccounts' })}>
                   Connect MetaMask
