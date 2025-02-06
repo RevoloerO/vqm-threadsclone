@@ -74,7 +74,7 @@
           "type": "address"
         }
       ],
-      "name": "getAllTweets",
+      "name": "getAllThreads",
       "outputs": [
         {
           "components": [
@@ -100,11 +100,11 @@
             },
             {
               "internalType": "uint256",
-              "name": "likes",
+              "name": "upvotes",
               "type": "uint256"
             }
           ],
-          "internalType": "struct Twitter.Tweet[]",
+          "internalType": "struct ThreadsClone.Thread[]",
           "name": "",
           "type": "tuple[]"
         }
@@ -120,7 +120,7 @@
           "type": "uint256"
         }
       ],
-      "name": "getTweet",
+      "name": "getThread",
       "outputs": [
         {
           "components": [
@@ -146,7 +146,7 @@
             },
             {
               "internalType": "uint256",
-              "name": "likes",
+              "name": "upvotes",
               "type": "uint256"
             }
           ],
@@ -160,7 +160,7 @@
     },
     {
       "inputs": [],
-      "name": "MAX_TWEET_LENGTH",
+      "name": "THREAD_LENGTH_LIMIT",
       "outputs": [
         {
           "internalType": "uint16",
