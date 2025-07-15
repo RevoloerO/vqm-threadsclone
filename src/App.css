@@ -1,18 +1,35 @@
-#root {
-  max-width: auto;
-  margin: 0 auto;
-  padding: 0.5vh 1vw;
-  text-align: center;
-}
-#header-img-1{
-  border-radius: 50%;
-  max-width: 20vw;
-  max-height: 20vh;
-  height: auto;
-  margin: auto;
-  margin-top: 5vh;
+/* App.css */
+
+/* Basic reset and font smoothing */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* The font-inter is set via Tailwind in App.jsx, but can be a fallback here */
+  font-family: 'Inter', sans-serif;
 }
 
+/* Root container for the application */
+#root {
+  max-width: auto; /* Allow content to take full width */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 0; /* Padding is handled by Tailwind in App.jsx */
+  text-align: center; /* Center text globally if needed, though often overridden by Tailwind */
+}
+
+/* Specific styling for the header image by ID */
+#header-img-1 {
+  border-radius: 50%; /* Make it circular */
+  max-width: 20vw; /* Responsive width */
+  max-height: 20vh; /* Responsive height */
+  height: auto; /* Maintain aspect ratio */
+  margin: auto; /* Center horizontally */
+  margin-top: 5vh; /* Top margin for spacing */
+}
+
+/* No longer needed as Tailwind handles most styling in App.jsx */
+/*
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,3 +52,4 @@
 .read-the-docs {
   color: #888;
 }
+*/
